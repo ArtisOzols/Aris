@@ -5529,6 +5529,9 @@ a:visited {
 .btn-close-white {
   filter: invert(1) grayscale(100%) brightness(200%);
 }
+.z-index-0 {
+  z-index: 0;
+}
 
 .toast {
   width: 350px;
