@@ -1,102 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Āris Ozols</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="./assets/logo.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link href="./css/styles.css" rel="stylesheet" />
         <script src="jquery-3.5.1.min.js"></script>
     </head>
-    <body style="background-image: url('./assets/background waves.gif'); background-size: 100vw auto; background-attachment: fixed;">
-        
-        <!-- Header - set the background image for the header in the line below-->
-        <header class="bg-image-full position-relative" style="z-index: -20; height: 100vh;">
-            <img src="./assets/Picture1.png" alt="Aris Ozols" style="width: 100vw;">
-            <div id="h1" class="text-center my-5 position-absolute">
-                <div class="blur"></div>
-                <img src="./assets/logo.png" alt="" class="fw-bolder">
-            </div>
-        </header>
+    <body>
+        <video width="100%" height="100%" autoplay muted loop class="my-video">
+            <source src="./assets/background waves.mp4" type="video/mp4">
+            <source src="./assets/background waves.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
 
+        <div class="position-relative" style="z-index: -2; max-height: 100vh; width: 100vw;">
+            <img src="./assets/GalvenaisAttēls.png" alt="Aris Ozols" class="main-picture1">
+        </div>
 
-        <nav class="navbar navbar-expand-lg sticky-top" id="nav" style="margin-top: -7.15%;">
-            <div id="menu">
-                <ul class="selected">
-                    <li>
-                        <a href="/">Sākums</a>
+    <header class="sticky-top main-header mb-0">
+        <nav class="navbar navbar-expand-md position-absolute" id="nav">
+            <a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav selected">
+                    <li class="nav-item">
+                    <a class="nav-link btn-link-hovered" href="./index.html">Sākums</a>
                     </li>
-                    <li>
-                        <a href="/jaunumi/">Jaunumi</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Jaunumi.html">Jaunumi</a>
                     </li>
-                    <li>
-                        <a href="MuzikalieProjekti.html">Muzikālie Projekti</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./MuzikalieProjekti.html">Muzikālie Projekti</a>
                     </li>
-                    <li id="maniDarbi">
-                        <a href="/par-mani/">Mani Darbi</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="return false;" id="maniDarbi">Mani Darbi</a>
                         <ul class="navsub">
-                            <li>
-                                <a href="/mani-dar/kompozicijas--aranzejumi/">Kompozīcijas Aranžējumi</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./KompozicijasAranzejumi.html.html">Kompozīcijas un Aranžējumi</a>
                             </li>
-                            <li>
-                                <a href="/mani-dar/fonogrammas/">Fonogrammas</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./Fonogrammas.html">Fonogrammas</a>
                             </li>
-                            <li>
-                                <a href="/mani-dar/gitaras-pmaciba/">Ģitāras Apmācība</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./GitarasApmaciba.html">Ģitāras Apmācība</a>
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="/par-mani/">Par Mani</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ParMani.html">Par Mani</a>
                     </li>
-                    <li>
-                        <a href="/kontakti/">Kontakti</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Kontakti.html">Kontakti</a>
                     </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link"></a>
+                    </li>
+                    <a class="lang lang-mob" href="./Kontakti.html">Eng</a>
                 </ul>
+                <a class="lang d-none d-xl-block d-lg-block d-md-block" href="./Kontakti.html">Eng</a>
             </div>
         </nav>
-
+    </header>
+    
         <section class="container px-4 myshadow" id="h2">
             <div class="row px-5">
-                <div class="py-5 col-lg-6">
+                <div class="py-5 h1-AO">
                     <h2 class="h1">Āris Ozols</h2>
-                    <h3 class="lead">Ģitārists, Komponists, Aranžētājs, Pasniedzējs</p>
+                    <h3>Ģitārists, Komponists, Aranžētājs, Pasniedzējs</p>
                 </div>
-                
-                <aside class="py-5 col-lg-6 d-flex justify-content-end">
-                    <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fsyincope&width=400&colorscheme=light&show_faces=false&border_color&stream=true&header=true&height=300" scrolling="yes" class="py-5" style="border:none; overflow:hidden; float:left;  width:400px; height:400px;" allowtransparency="true" frameborder="0"></iframe>
+            </div>
+    <!-- Jaunumi -->
+            <div class="row px-5">
+                <h2 class="h1 pb-5">Jaunumi</h2>
+            </div>
+            <div class="row px-5">
+                <div class="col-md-8" style="align-self: center;">
+                    <a data-pin-do="embedUser" data-pin-board-width="900" data-pin-scale-height="400" data-pin-scale-width="115" href="https://www.pinterest.com/arisozols/"></a>
+                </div>
+
+                <aside class="col-md-4">
+                    <section id="youtoube">
+                        <div class="youtube container myshadow">
+                                <!-- END OF SLIDES -->
+                                <div class="slide-arrow left"></div>
+                                <div class="slide-arrow right"></div>
+                            <div class="video-slider">
+                                <!-- SLIDE 1 -->
+                                <div class="slide">
+                                    <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" vnum='0' cid="UCGiIc0aaP6o8v11-M4j3q8g" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                                </div>
+                                <!-- SLIDE 2 -->
+                                <div class="slide">
+                                    <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" vnum='1' cid="UCGiIc0aaP6o8v11-M4j3q8g" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                                </div>
+                                <!-- SLIDE 3 -->
+                                <div class="slide">
+                                    <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" vnum='3' cid="UCGiIc0aaP6o8v11-M4j3q8g" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
                 </aside>
             </div>
-        </section>
 
-        
-        <!-- youtube -->
-        <section>
-            <div class="youtube container myshadow">
-                    <!-- END OF SLIDES -->
-                    <div class="slide-arrow left"></div>
-                    <div class="slide-arrow right"></div>
-                <div class="video-slider">
-                    <!-- SLIDE 1 -->
-                    <div class="slide">
-                        <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" vnum='0' cid="UCGiIc0aaP6o8v11-M4j3q8g" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-                    </div>
-                    <!-- SLIDE 2 -->
-                    <div class="slide">
-                        <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" vnum='1' cid="UCGiIc0aaP6o8v11-M4j3q8g" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-                    </div>
-                    <!-- SLIDE 3 -->
-                    <div class="slide">
-                        <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" vnum='3' cid="UCGiIc0aaP6o8v11-M4j3q8g" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-                    </div>
-                </div>
+    <!-- Par Mani -->
+            <div class="row px-5">
+                <h2 class="h1 pb-5 pt-5 mt-5">Par Mani</h2>
             </div>
-        </section>
+            <div class="row px-5">
+                <h2 class="lead">Āris Ozols darbojas kā ģitārists, pedagogs, komponists, aranžētājs, gatavo fonogrammas un mūziku digitālajai videi. Rīgas Doma kora skolas (populārās un džeza nodaļas), kā arī Jāzepa Vītola Latvijas mūzikas akadēmijas džeza katedras absolvents, 1 gadu mācījies Romā, Itālijā – Conservatorio di Santa Cecilia. Koncertējis un regulāri koncertē dažādās pasaules valstīs, un festivālos – Somijā, Zviedrijā, Igaunijā, Lietuvā, Polijā, Vācijā, Šveicē, Itālijā un ASV (Miami). Spēlējis un sadarbojies ar daudziem mūziķiem, dažādās grupās un orķestros (Pūtēju orķestris Rīga, Zemessardzes orķestris, Jelgavas bigbends), bet biežāk redzams spēlējot divatā ar dažādiem latviešu un ārzemju māksliniekiem (Jolanta Gulbe-Paškeviča, Alise Kante, Kaspars Markševics u.c.) <a href="./ParMani.html"><b>→</b></a></h2>
+            </div>
 
+        </section>
         <!-- Content section-->
         <footer>
             <div class="soc">
@@ -106,6 +130,12 @@
             </div>
         </footer>
 
+
+    <!-- scripts -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
@@ -113,7 +143,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
-
+    <!-- Youtube -->
         <script>// Additionnal code for the slider
             var pos = 0,
                 slides = $('.slide'),
@@ -141,24 +171,46 @@
             $('.left').click(previousSlide);
             $('.right').click(nextSlide);
         </script>
-        
+
+    <!-- Youtube -->
         <script>
-        var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
-        function loadVideo(iframe) {
-          $.getJSON(reqURL + iframe.getAttribute('cid'),
-            function(data) {
-              var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
-              console.log(videoNumber);
-              var link = data.items[videoNumber].link;
-              id = link.substr(link.indexOf("=") + 1);
-              iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=0");
+            var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+            function loadVideo(iframe) {
+            $.getJSON(reqURL + iframe.getAttribute('cid'),
+                function(data) {
+                var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+                console.log(videoNumber);
+                var link = data.items[videoNumber].link;
+                id = link.substr(link.indexOf("=") + 1);
+                iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=0");
+                }
+            );
             }
-          );
-        }
-        var iframes = document.getElementsByClassName('latestVideoEmbed');
-        for (var i = 0, len = iframes.length; i < len; i++) {
-          loadVideo(iframes[i]);
-        }
+            var iframes = document.getElementsByClassName('latestVideoEmbed');
+            for (var i = 0, len = iframes.length; i < len; i++) {
+            loadVideo(iframes[i]);
+            }
+        </script>
+    <!-- Pinterest -->
+        <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+        <script>
+    // facebook
+            let width;
+            if(window.screen.availWidth < 575) {
+                width = window.screen.availWidth - 100;
+            } else if(window.screen.availWidth < 768) {
+                width = 465;
+            } else if(window.screen.availWidth < 992) {
+                width = 200;
+            } else if(window.screen.availWidth < 1200) {
+                width = 280;
+            } else if(window.screen.availWidth < 1400) {
+                width = 340;
+            } else {
+                width = 400;
+            }
+            let link = "http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FAris-Ozols-musician-101311932264165&width=" + width + "&colorscheme=light&show_faces=false&border_color&stream=true&header=true&height=300";
+            document.getElementById("youtoube").insertAdjacentHTML("afterbegin", "<iframe src='" + link + "' scrolling='yes' class='py-5' style='border:none; overflow:hidden; float:left;  width:" + width + "px; height:300px; padding: 0 !important;' allowtransparency='true' frameborder='0'></iframe>");
         </script>
     </body>
 </html>
