@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Āris Ozols</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="./assets/logo.ico" />
+        <link rel="shortcut icon" type="image/png" href="./assets/logo.png" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <link href="./css/styles.css" rel="stylesheet" />
@@ -19,8 +19,8 @@
             
         </video>
 
-        <div class="position-relative" style="z-index: -2; max-height: 100vh; width: 100%;">
-            <img src="./assets/priekšplānaAttēls.png" alt="Aris Ozols" class="main-picture1">
+        <div class="position-relative" style="max-height: 100vh; width: 100%;">
+            <img src="./assets/prieksplanaAttels.png" alt="Aris Ozols" class="main-picture1">
         </div>
 
     <header class="sticky-top main-header mb-0">
@@ -43,7 +43,7 @@
                         <a class="nav-link" href="#" onclick="return false;" id="maniDarbi">My Work</a>
                         <ul class="navsub">
                             <li class="nav-item">
-                                <a class="nav-link" href="./compositions-and -arrangements.html">Compositions and Arrangements</a>
+                                <a class="nav-link" href="./compositions-and-arrangements.html">Compositions and Arrangements</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./backing-tracks.html">Backing Tracks</a>
@@ -88,7 +88,7 @@
 
                 <aside class="col-md-4">
                     <section id="youtoube">
-                        <div class="youtube container myshadow">
+                        <div class="youtube container">
                                 <!-- END OF SLIDES -->
                                 <div class="slide-arrow left"></div>
                                 <div class="slide-arrow right"></div>
@@ -124,9 +124,11 @@
         <!-- Content section-->
         <footer>
             <div class="soc">
+                <a href="https://open.spotify.com/artist/5Lxvl3Cw1XkkTr0JZsEMaJ?si=L6pUaCqXSvKp-vjnu6G2-A&dl_branch=1" target="_blank"><img src="./assets/spotify.png" style="padding: 5px;" alt="spotify"></a>
                 <a href="https://www.youtube.com/channel/UCGiIc0aaP6o8v11-M4j3q8g" target="_blank"><img src="./assets/youtube.svg" style="padding: 3px;" alt="youtube"></a>
                 <a href="https://soundcloud.com/aris-ozols" target="_blank"><img src="./assets/soundcloud.png" alt="soundcloud" class="p-1"></a>
                 <a href="https://www.facebook.com/Aris-Ozols-musician-101311932264165/?ref=page_internal" target="_blank"><img src="./assets/facebook.png" alt="facebook"></a>
+                <a href="https://www.instagram.com/arisozols" target="_blank"><div class="icons p-2"><img src="./assets/instagram.png" alt="instagram" class="instagram"></div></a>
             </div>
         </footer>
 
@@ -195,11 +197,15 @@
     <!-- facebook -->
     <script>
             let width;
-            if(window.screen.availWidth < 575) {
-                width = window.screen.availWidth - 100;
-            } else if(window.screen.availWidth < 768) {
-                width = 465;
-            } else if(window.screen.availWidth < 992) {
+            if(window.screen.availWidth < 332) {
+                width = 200;
+            } else if(window.screen.availWidth < 250) {
+                width = window.screen.availWidth - 140;
+            } else if(window.screen.availWidth < 550) {
+                width = window.screen.availWidth - 150;
+            } else if(window.screen.availWidth < 632) {
+                width = window.screen.availWidth - 160;
+            } else if(window.screen.availWidth < 845) {
                 width = 200;
             } else if(window.screen.availWidth < 1200) {
                 width = 280;

@@ -656,6 +656,13 @@ a p {
   border-radius: 50px;
   margin: 0 10px;
 }
+.soc a div .instagram {
+    margin: 0;
+    padding: 2px;
+    border-radius: 7px;
+    width: 30px !important;
+    height: 30px !important;
+}
 @media (max-width: 575px) {
   #kontakti-section {
     font-size: smaller;
@@ -663,6 +670,9 @@ a p {
   #kontakti-section > .icons {
     width: 30px !important;
     height: 30px !important
+  }
+  .soc a img, .icons {
+    margin: 0 8px; 
   }
 }
 h1 {
@@ -838,6 +848,7 @@ h1 {
   position: relative;
   overflow: hidden;
   padding: 0 !important;
+  box-shadow: 0 -10px 20px 0px black;
 }
 .video-slider {
   width: 100%;
