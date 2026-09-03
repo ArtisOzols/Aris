@@ -7,11 +7,9 @@ RewriteEngine On
 # 1. Standard index page setup
 DirectoryIndex index.html
 
-# 2. Don't rewrite actual existing files or directories
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
+# 2. Redirect root domain (example.com) to default language (/eng/)
+RewriteRule ^$ /eng/ [R=301,L]
 
-# 3. Append .html to non-file/directory requests if the .html file exists
-RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-RewriteRule ^(.*)$ $1.html [NC,L]
+# 3. Ensure trailing slashes on subfolders so relative links/assets don't break
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
