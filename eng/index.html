@@ -89,14 +89,13 @@
             <div class="row px-5">
                 <h2 class="h1 pb-5">News</h2>
             </div>
-            <div class="row px-5">
-                <div class="col-md-8" style="align-self: center;">
-                    <a data-pin-do="embedUser" data-pin-board-width="900" data-pin-scale-height="400" data-pin-scale-width="115" href="https://www.pinterest.com/arisozols/"></a>
+            <div class="row px-5"></div>
+                <div class="custom-height col-md-8 w-100 d-flex justify-content-center">
+                    <a data-pin-do="embedUser" data-pin-scale-height="700" href="https://www.pinterest.com/arisozols/"></a>
                 </div>
-
-                <aside class="col-md-4">
-                    <section id="youtoube">
-                        <div class="youtube container">
+                <aside class="m-auto custom-height col-md-8 pt-5 w-100 d-flex justify-content-center">
+                    <section id="youtube" class="h-100 w-100 w-lg-70">
+                        <div class="youtube h-100 container">
                                 <!-- END OF SLIDES -->
                                 <div class="slide-arrow left"></div>
                                 <div class="slide-arrow right"></div>
@@ -119,6 +118,7 @@
     
                 </aside>
             </div>
+
 
     <!-- About Me -->
             <div class="row px-5">
@@ -200,26 +200,9 @@
     <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
     <!-- facebook -->
     <script>
-            let width;
-            if(window.screen.availWidth < 332) {
-                width = 200;
-            } else if(window.screen.availWidth < 250) {
-                width = window.screen.availWidth - 140;
-            } else if(window.screen.availWidth < 550) {
-                width = window.screen.availWidth - 150;
-            } else if(window.screen.availWidth < 632) {
-                width = window.screen.availWidth - 160;
-            } else if(window.screen.availWidth < 845) {
-                width = 200;
-            } else if(window.screen.availWidth < 1200) {
-                width = 280;
-            } else if(window.screen.availWidth < 1400) {
-                width = 340;
-            } else {
-                width = 400;
-            }
-            let link = "http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FAris-Ozols-musician-101311932264165&width=" + width + "&colorscheme=light&show_faces=false&border_color&stream=true&header=true&height=300";
-            document.getElementById("youtoube").insertAdjacentHTML("afterbegin", "<iframe src='" + link + "' scrolling='yes' class='py-5' style='border:none; overflow:hidden; float:left;  width:" + width + "px; height:300px; padding: 0 !important;' allowtransparency='true' frameborder='0'></iframe>");
-        </script>
+        let width = "100%";
+        let link = "http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FAris-Ozols-musician-101311932264165&colorscheme=light&show_faces=false&border_color&stream=true&header=true&height=300";
+        document.getElementById("youtube").insertAdjacentHTML("afterbegin", "<iframe src='" + link + "' scrolling='yes' class='py-5' style='border:none; overflow:hidden; float:left;  width:" + width + "; height:0px; padding: 0 !important;' allowtransparency='true' frameborder='0'></iframe>");
+    </script>
     </body>
 </html>

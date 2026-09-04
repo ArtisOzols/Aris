@@ -78,38 +78,37 @@
         <section class="container px-4 myshadow pt-2" id="h2">
             <h1 class="text-center mb-5 pt-5 text-uppercase">News</h1>
 
-            <div class="row px-5">
-                <div class="py-5 col-md-8">
-                    <a data-pin-do="embedUser" data-pin-board-width="900" data-pin-scale-height="400" data-pin-scale-width="115" href="https://www.pinterest.com/arisozols/"></a>
+            <div class="row px-5"></div>
+                <div class="custom-height col-md-8 w-100 d-flex justify-content-center">
+                    <a data-pin-do="embedUser" data-pin-scale-height="700" href="https://www.pinterest.com/arisozols/"></a>
                 </div>
-                <aside class="py-5 col-md-4" id="youtoube">
+                <aside class="m-auto custom-height col-md-8 pt-5 w-100 d-flex justify-content-center">
+                    <section id="youtube" class="h-100 w-100 w-lg-70">
+                        <div class="youtube h-100 container">
+                                <!-- END OF SLIDES -->
+                                <div class="slide-arrow left"></div>
+                                <div class="slide-arrow right"></div>
+                            <div class="video-slider">
+                                <!-- SLIDE 1 -->
+                                <div class="slide">
+                                    <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" data-video-number="0" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Latest YouTube video"></iframe></div>
+                                </div>
+                                <!-- SLIDE 2 -->
+                                <div class="slide">
+                                    <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" data-video-number="1" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Latest YouTube video"></iframe></div>
+                                </div>
+                                <!-- SLIDE 3 -->
+                                <div class="slide">
+                                    <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" data-video-number="2" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Latest YouTube video"></iframe></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
                 </aside>
             </div>
 
-            <div class="row px-5 pt-5 mt-4">
-                <!-- youtube -->
-                <section>
-                    <div class="youtube container">
-                            <!-- END OF SLIDES -->
-                            <div class="slide-arrow left"></div>
-                            <div class="slide-arrow right"></div>
-                        <div class="video-slider slider-full">
-                            <!-- SLIDE 1 -->
-                            <div class="slide slider-full">
-                                <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" data-video-number="0" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Latest YouTube video"></iframe></div>
-                            </div>
-                            <!-- SLIDE 2 -->
-                            <div class="slide slider-full">
-                                <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" data-video-number="1" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Latest YouTube video"></iframe></div>
-                            </div>
-                            <!-- SLIDE 3 -->
-                            <div class="slide slider-full">
-                                <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" data-video-number="2" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Latest YouTube video"></iframe></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
+
         </section>
 
         <!-- Content section-->
@@ -182,25 +181,9 @@
         </script>
         <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
         <script>
-            let width;
-            let height = 512;
-            if(window.screen.availWidth < 575) {
-                width = window.screen.availWidth - 100;
-                height = 300;
-            } else if(window.screen.availWidth < 768) {
-                width = 450;
-                height = 300;
-            } else if(window.screen.availWidth < 992) {
-                width = 200;
-            } else if(window.screen.availWidth < 1200) {
-                width = 280;
-            } else if(window.screen.availWidth < 1400) {
-                width = 340;
-            } else {
-                width = 400;
-            }
-            let link = "http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FAris-Ozols-musician-101311932264165&width=" + width + "&colorscheme=light&show_faces=false&border_color&stream=true&header=true&height=" + height;
-            document.getElementById("youtoube").insertAdjacentHTML("afterbegin", "<iframe src='" + link + "' scrolling='yes' class='py-5' style='border:none; overflow:hidden; float:left;  width:" + width + "px; height:" + height + "px; padding: 0 !important;' allowtransparency='true' frameborder='0'></iframe>");
+            let width = "100%";
+            let link = "http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FAris-Ozols-musician-101311932264165&colorscheme=light&show_faces=false&border_color&stream=true&header=true&height=300";
+            document.getElementById("youtube").insertAdjacentHTML("afterbegin", "<iframe src='" + link + "' scrolling='yes' class='py-5' style='border:none; overflow:hidden; float:left;  width:" + width + "; height:0px; padding: 0 !important;' allowtransparency='true' frameborder='0'></iframe>");
         </script>
     </body>
 </html>
