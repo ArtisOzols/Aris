@@ -11205,3 +11205,17 @@ a:visited {
     display: none !important;
   }
 }
+
+.custom-height {
+    height: 30vh;
+  }
+  @media (min-width: 768px) {
+    .custom-height {
+      height: 40vh;
+    }
+  }
+@media (min-width: 992px) {
+    .w-lg-70 {
+      width: 70% !important;
+    }
+  }
