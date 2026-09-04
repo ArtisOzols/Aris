@@ -96,15 +96,15 @@
                         <div class="video-slider slider-full">
                             <!-- SLIDE 1 -->
                             <div class="slide slider-full">
-                                <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" vnum='0' cid="UCGiIc0aaP6o8v11-M4j3q8g" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                                <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" data-video-number="0" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Latest YouTube video"></iframe></div>
                             </div>
                             <!-- SLIDE 2 -->
                             <div class="slide slider-full">
-                                <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" vnum='1' cid="UCGiIc0aaP6o8v11-M4j3q8g" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                                <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" data-video-number="1" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Latest YouTube video"></iframe></div>
                             </div>
                             <!-- SLIDE 3 -->
                             <div class="slide slider-full">
-                                <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" vnum='3' cid="UCGiIc0aaP6o8v11-M4j3q8g" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+                                <div style="position:relative;width: 100%; height: 100%;"><iframe class="latestVideoEmbed" data-video-number="2" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="Latest YouTube video"></iframe></div>
                             </div>
                         </div>
                     </div>
@@ -166,22 +166,19 @@
         </script>
         
         <script>
-        var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
-        function loadVideo(iframe) {
-          $.getJSON(reqURL + iframe.getAttribute('cid'),
-            function(data) {
-              var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
-              console.log(videoNumber);
-              var link = data.items[videoNumber].link;
-              id = link.substr(link.indexOf("=") + 1);
-              iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=0");
-            }
-          );
-        }
-        var iframes = document.getElementsByClassName('latestVideoEmbed');
-        for (var i = 0, len = iframes.length; i < len; i++) {
-          loadVideo(iframes[i]);
-        }
+            var feedUrl = "https://www.youtube.com/feeds/videos.xml?channel_id=UCGiIc0aaP6o8v11-M4j3q8g";
+            var videoIframes = document.getElementsByClassName('latestVideoEmbed');
+            fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feedUrl.replace("https://", "http://")))
+                .then(function(response) { return response.json(); })
+                .then(function(data) {
+                    if (!data.items) return;
+                    for (var i = 0; i < videoIframes.length; i++) {
+                        var video = data.items[Number(videoIframes[i].getAttribute('data-video-number'))];
+                        if (video && video.link) {
+                            videoIframes[i].src = "https://www.youtube.com/embed/" + video.link.split("v=")[1];
+                        }
+                    }
+                });
         </script>
         <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
         <script>
